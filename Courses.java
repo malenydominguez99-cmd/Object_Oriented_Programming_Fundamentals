@@ -5,7 +5,6 @@ public class Courses {
 	String coursesName;
 	String professorName;
 	int year;
-	
 	List<Student> students;
 	
 	public Courses(String coursesName, String professorName, int year) {
