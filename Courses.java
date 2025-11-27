@@ -18,6 +18,12 @@ public class Courses {
 		students.add(student);
 	}//enroll
 	
+	public void enroll(Student[] studentsArray) {
+		for (Student s: studentsArray) {
+			students.add(s);
+		}
+	}//enroll
+	
 	public void unEnroll(Student student) {
 		if (students.contains(student)) {
 			students.remove(student);
