@@ -44,4 +44,33 @@ public class Courses {
 		return best;
 	}//bestGrade
 	
+	public double averageGrade() {
+		if (students.isEmpty()) return 0;
+		
+		double sum= 0;
+		for (Student s : students) {
+			sum += s.grade;
+		}
+		return sum / students.size();
+	}//averageGrade
+		
+	public void ranking() {
+		System.out.println("Ranking del curso: " + coursesName);
+		for (Student s : students) {
+			System.out.println(s.firstName + " " + s.lastName + " - Nota: " + s.grade);
+		}
+	}//ranking
+	
+	 public void aboveAverage() {
+	        double avg = averageGrade();
+	        System.out.println("Promedio del curso: " + avg);
+	        
+	        for (Student s : students) {
+	            if (s.grade > avg) {
+	                System.out.println(s.firstName + " " + s.lastName + " Esta por encima del promedio");
+	            } else {
+	                System.out.println(s.firstName + " " + s.lastName + " No esta por encima del promedio");
+	            }
+	        }
+	 }//aboveAverage
 }//couses

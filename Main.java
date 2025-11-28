@@ -9,6 +9,17 @@ public class Main {
 			maria.changeYearIfApproved();
 			monse.changeYearIfApproved();
 			
+			Courses math = new Courses("Matemáticas", "Prof. López", 2025);
+			math.enroll(aldo);
+			Student[] moreStudents = {maria, monse};
+			math.enroll(moreStudents);
+			
+			System.out.println("Estudiantes inscritos: " + math.countStudents());
+	        System.out.println("Mejor calificación: " + math.bestGrade());
+	        
+	        System.out.println("Promedio del curso: " + math.averageGrade());
+	        math.ranking();
+	        math.aboveAverage();
 			
 		}//class Main
 
